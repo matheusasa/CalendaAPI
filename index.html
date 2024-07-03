@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Google Calendar API Quickstart</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p>Google Calendar API Quickstart</p>
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+    <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+    <button id="quickadd_button" onclick="quickAddEvent()">Adicionar Evento</button>
+    <label for="">Calendar Id</label>
+    <input type="text" id="calendarId">
+    <label for="">Nome do evento</label>
+    <input type="text" id="sumary">
+    <label for="">Descrição</label>
+    <input type="text" id="description">
+    <label for="">Data</label>
+    <input type="date" id="startdate">
+    <label for="">Hora</label>
+    <input type="time" id="starttime">
+    <label for="">Data</label>
+    <input type="date" id="enddate">
+    <label for="">Hora</label>
+    <input type="time" id="endtime">
+    <label for="">Local</label>
+    <input type="text" id="location">
+
+
+
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+    <script src="script.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+    <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+</body>
+
+</html>
